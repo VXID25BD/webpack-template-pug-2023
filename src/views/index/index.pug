@@ -1,6 +1,16 @@
-html
-    head 
-        title Webpack + Pug 2023
+// include mixins
+//- include ../../components/ui/button/button.pug
+
+html(lang="ru")
+    head
+        meta(name="description", content="WEBPACK CONFIG LANDING")
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        link(href=require("../../assets/styles/styles.scss") rel="stylesheet")
+        title WEBPACK CONFIG PUG 2023
     body
-        h1 Title
-        script(src="../../main.js") 
+        .root 
+            include ../../components/header/header.pug
+            main.page
+                //- include ../../components/hero/hero.pug
+            include ../../components/footer/footer.pug
+        script(src=require("./main.js"))
