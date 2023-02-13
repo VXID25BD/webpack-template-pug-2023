@@ -7,7 +7,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist/'),
-        publicPath: '/',
+        publicPath: './',
         filename: 'assets/js/[name].[contenthash:8].js'
     },
     plugins: [
@@ -26,15 +26,12 @@ module.exports = {
           {
             test: /\.pug$/,
             loader: PugPlugin.loader
-            //☝🏽 Load Pug files
           },
           {
             test: /\.(css|sass|scss)$/,
             use: ['css-loader', 'sass-loader']
-            //☝🏽 Load Sass files
           },
           {
-            // To use images on pug files:
             test: /\.(png|jpg|jpeg|ico)/,
             type: 'asset/resource',
             generator: {
@@ -42,7 +39,6 @@ module.exports = {
             }
           },
           {
-            // To use fonts on pug files:
             test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
             type: 'asset/resource',
             generator: {
@@ -57,7 +53,6 @@ module.exports = {
         },
         watchFiles: {
           paths: ['src/**/*.*', 'assets/scss/**/*.*'],
-          //☝🏽 Enables HMR in these folders
           options: {
             usePolling: true
           }
