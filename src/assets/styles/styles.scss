@@ -2,12 +2,6 @@
 @import "nullstyles";
 @import "vars";
 
-body{
-    font-family: $ff-primary;
-
-    // &._lock{overflow: hidden;}
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: $fw-bold;
     font-size: 60px;
@@ -20,14 +14,14 @@ h5{font-size: 24px;}
 h6{font-size: 20px;}
 
 .outer{
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 
 .container{
     width: 100%;
-    max-width: 1330px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
