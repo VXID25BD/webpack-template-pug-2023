@@ -1,5 +1,6 @@
 const path = require("path");
 const PugPlugin = require("pug-plugin");
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
     entry: {
