@@ -35,7 +35,24 @@ module.exports = {
           },
           {
             test: /\.(css|sass|scss)$/,
-            use: ['css-loader', 'sass-loader']
+            use: [
+                {
+                    loader: "css-loader"
+                },
+                {
+                    loader: "postcss-loader",
+                    options: {
+                        postcssOptions: {
+                            plugins: [
+                                autoprefixer()
+                            ]
+                        }
+                    }
+                },
+                {
+                    loader: "sass-loader"
+                }
+            ]
           },
           {
             test: /\.(png|jpg|jpeg|ico)/,
