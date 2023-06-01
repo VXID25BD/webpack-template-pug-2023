@@ -1,8 +1,9 @@
 const path = require("path");
 const PugPlugin = require("pug-plugin");
 const autoprefixer = require("autoprefixer");
-const mode = process.NODE_ENV;
+const mode = process.env.NODE_ENV;
 
+console.log(mode);
 module.exports = {
     entry: {
         index: path.resolve(__dirname, "src", "views", "index", "index.pug"),
