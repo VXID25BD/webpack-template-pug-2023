@@ -1,6 +1,7 @@
 const path = require("path");
 const PugPlugin = require("pug-plugin");
 const autoprefixer = require("autoprefixer");
+const mode = process.NODE_ENV;
 
 module.exports = {
     entry: {
@@ -8,7 +9,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist/'),
-        publicPath: '/',
+        publicPath: mode === "development" ? "/" : './',
         filename: 'assets/js/[name].[contenthash:8].js'
     },
     resolve: {
